@@ -1,0 +1,38 @@
+@model IEnumerable<RazorTest.Models.Queue>
+
+@{
+	ViewData["Title"] = "Queues";
+}
+
+<h2>Queues</h2>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Teachers</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var queue in Model)
+		{
+			<tr>
+				<td>@queue.QueueName</td>
+				<td>
+					@foreach (var teacher in queue.Teachers)
+					{
+						<span class="badge bg-secondary">
+							@teacher.Name
+						</span>
+					}
+				</td>
+				<td>
+					<a class="btn btn-primary btn-sm" asp-action="Details" asp-route-id="@queue.Id">
+						Open
+					</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

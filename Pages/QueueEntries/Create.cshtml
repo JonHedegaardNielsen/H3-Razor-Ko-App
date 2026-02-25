@@ -1,0 +1,16 @@
+@using RazorTest.Models
+@model QueueEntry
+
+@{
+	ViewData["Title"] = "Join Queue";
+}
+
+<h2>Join Queue</h2>
+
+<form asp-action="Create" method="post">
+	<input type="hidden" asp-for="QueueId" />
+
+	<button class="btn btn-success">
+		Confirm Join
+	</button>
+</form>

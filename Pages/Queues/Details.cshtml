@@ -1,0 +1,49 @@
+@model RazorTest.Models.Queue
+
+@{
+	ViewData["Title"] = "Queue Details";
+}
+
+<h2>@Model.QueueName</h2>
+
+@if (User.IsInRole("Student"))
+{
+	<a class="btn btn-success mb-3" asp-controller="QueueEntries" asp-action="Create" asp-route-queueId="@Model.Id">
+		Join Queue
+	</a>
+}
+
+<h4>Current Students in Queue</h4>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Student</th>
+			<th>Created</th>
+			@if (User.IsInRole("Teacher"))
+			{
+				<th></th>
+			}
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var entry in Model.QueueEntries.OrderBy(q => q.CreatedAt))
+		{
+			<tr>
+				<td>@entry.Student.Name</td>
+				<td>@entry.CreatedAt.ToLocalTime()</td>
+
+				@if (User.IsInRole("Teacher"))
+				{
+					<td>
+						<form asp-controller="QueueEntries" asp-action="Delete" asp-route-id="@entry.Id" method="post">
+							<button class="btn btn-danger btn-sm">
+								Take / Remove
+							</button>
+						</form>
+					</td>
+				}
+			</tr>
+		}
+	</tbody>
+</table>

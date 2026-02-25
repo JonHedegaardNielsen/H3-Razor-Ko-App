@@ -1,0 +1,15 @@
+@{
+	ViewData["Title"] = "Home";
+}
+
+<h2>Welcome to the Queue System</h2>
+
+@if (User.IsInRole("Teacher"))
+{
+	<p>You are logged in as a Teacher.</p>
+}
+
+@if (User.IsInRole("Student"))
+{
+	<p>You are logged in as a Student.</p>
+}
