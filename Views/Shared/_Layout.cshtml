@@ -20,9 +20,7 @@
 					@if (User.IsInRole("Teacher"))
 					{
 						<li class="nav-item">
-							<a class="nav-link" asp-controller="Queues" asp-action="Index">
-								Manage Queues
-							</a>
+							<a asp-controller="Queues" asp-action="MyQueues">Mine køer</a>
 						</li>
 					}
 

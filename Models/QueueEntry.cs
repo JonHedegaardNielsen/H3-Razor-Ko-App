@@ -15,4 +15,7 @@ public class QueueEntry
 	public Teacher? Teacher { get; set; }
 
 	public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+	public string Description { get; set; } = "";
+	public string Location { get; set; } = "";
 }

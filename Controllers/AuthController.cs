@@ -35,7 +35,7 @@ public class AuthController : Controller
 		if (student != null)
 		{
 			await SignInUser(student.Id, student.Name, "Student");
-			return RedirectToAction("Index", "Home");
+			return RedirectToAction("Student", "Queues");
 		}
 
 		// Check Teacher
@@ -45,7 +45,7 @@ public class AuthController : Controller
 		if (teacher != null)
 		{
 			await SignInUser(teacher.Id, teacher.Name, "Teacher");
-			return RedirectToAction("Index", "Home");
+			return RedirectToAction("MyQueues", "Queues");
 		}
 
 		ModelState.AddModelError("", "Invalid login attempt");

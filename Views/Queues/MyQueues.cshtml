@@ -1,0 +1,92 @@
+@model List<RazorTest.Models.Queue>
+
+@{
+    ViewData["Title"] = "Mine køer";
+}
+
+<h2>Mine køer</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Info"] != null)
+{
+    <div class="alert alert-info">@TempData["Info"]</div>
+}
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning">
+        Du er ikke tilknyttet nogen køer endnu.
+    </div>
+}
+else
+{
+    @foreach (var q in Model.OrderBy(x => x.QueueName))
+    {
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h4 class="card-title mb-1">@q.QueueName</h4>
+                        <div class="text-muted">
+                            Elever i kø: @q.QueueEntries?.Count()
+                        </div>
+                    </div>
+
+                    <a class="btn btn-outline-primary"
+                       asp-controller="Queues"
+                       asp-action="Details"
+                       asp-route-id="@q.Id">
+                        Se detaljer
+                    </a>
+                </div>
+
+                <hr />
+
+                @if (q.QueueEntries == null || !q.QueueEntries.Any())
+                {
+                    <p class="text-muted mb-0">Ingen elever i kø lige nu.</p>
+                }
+                else
+                {
+                    <table class="table table-sm align-middle mb-0">
+                        <thead>
+                            <tr>
+                                <th>Elev</th>
+                                <th>Oprettet</th>
+                                <th class="text-end">Handling</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var entry in q.QueueEntries.OrderBy(e => e.CreatedAt))
+                            {
+                                <tr>
+                                    <td>@entry.Student?.Name</td>
+                                    <td>@entry.CreatedAt.ToLocalTime()</td>
+                                    <td class="text-end">
+                                        <form asp-controller="QueueEntries"
+                                              asp-action="Delete"
+                                              asp-route-id="@entry.Id"
+                                              method="post"
+                                              class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                Take / Remove
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    }
+}

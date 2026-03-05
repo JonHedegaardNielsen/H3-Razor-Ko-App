@@ -1,0 +1,43 @@
+@using RazorTest.Models
+@{
+    ViewData["Title"] = "Sæt mig i kø";
+    var queues = ViewBag.Queues as List<Queue> ?? new List<Queue>();
+}
+
+<h2>Sæt mig i kø</h2>
+
+@if (TempData["Error"] != null) { <div class="alert alert-danger">@TempData["Error"]</div> }
+@if (TempData["Success"] != null) { <div class="alert alert-success">@TempData["Success"]</div> }
+@if (TempData["Info"] != null) { <div class="alert alert-info">@TempData["Info"]</div> }
+
+<div class="text-danger" asp-validation-summary="All"></div>
+
+<form asp-controller="Queues" asp-action="Join" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label class="form-label">Vælg kø</label>
+        <select class="form-select" name="queueId" required>
+            <option value="">-- vælg kø --</option>
+            @foreach (var q in queues)
+            {
+                <option value="@q.Id">@q.QueueName</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Hvad ønsker du hjælp til?</label>
+        <textarea class="form-control" name="description" rows="4" required
+                  placeholder="Beskriv kort dit problem...">@Context.Request.Form["description"]</textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Lokation</label>
+        <input class="form-control" name="location" required
+               placeholder="Fx B2-12, lokale 203..."
+               value="@Context.Request.Form["location"]" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Sæt mig i kø</button>
+</form>

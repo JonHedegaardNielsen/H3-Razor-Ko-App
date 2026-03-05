@@ -6,11 +6,17 @@
 
 <h2>@Model.QueueName</h2>
 
+@if (TempData["Error"] != null) { <div class="alert alert-danger">@TempData["Error"]</div> }
+@if (TempData["Success"] != null) { <div class="alert alert-success">@TempData["Success"]</div> }
+@if (TempData["Info"] != null) { <div class="alert alert-info">@TempData["Info"]</div> }
+
 @if (User.IsInRole("Student"))
 {
-	<a class="btn btn-success mb-3" asp-controller="QueueEntries" asp-action="Create" asp-route-queueId="@Model.Id">
-		Join Queue
-	</a>
+    <form asp-controller="Queues" asp-action="Join" method="post" class="mb-3">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="queueId" value="@Model.Id" />
+        <button type="submit" class="btn btn-success">Sæt mig i kø</button>
+    </form>
 }
 
 <h4>Current Students in Queue</h4>

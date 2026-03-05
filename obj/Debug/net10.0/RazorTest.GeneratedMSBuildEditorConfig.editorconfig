@@ -58,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVldWVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Queues/MyQueues.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVldWVzL015UXVldWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Queues/Student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVldWVzL1N0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
