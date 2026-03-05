@@ -218,8 +218,6 @@
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/compressed/97rkibe2hc-{0}-muycvpuwrr-muycvpuwrr.gz
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/compressed/9au7uzdzir-{0}-87fc7y1x7t-87fc7y1x7t.gz
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/compressed/sz74izmhpj-{0}-jfsiqqwiad-jfsiqqwiad.gz
-/home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/compressed/10ydg1lujk-{0}-6lp9bpjkhy-6lp9bpjkhy.gz
-/home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/compressed/v1u8wlxq8i-{0}-6lp9bpjkhy-6lp9bpjkhy.gz
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/staticwebassets.build.json
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/staticwebassets.build.json.cache
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/staticwebassets.development.json
@@ -232,3 +230,7 @@
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/RazorTest.genruntimeconfig.cache
 /home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/ref/RazorTest.dll
 /home/jon/Programming/C#/RazorTest/bin/Debug/net10.0/dotnet-tools.json
+/home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/RazorTest.sourcelink.json
+/home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/compressed/10ydg1lujk-{0}-gz3vnego5u-gz3vnego5u.gz
+/home/jon/Programming/C#/RazorTest/obj/Debug/net10.0/compressed/v1u8wlxq8i-{0}-gz3vnego5u-gz3vnego5u.gz
