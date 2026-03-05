@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorTest.Data;
 
@@ -10,9 +11,11 @@ using RazorTest.Data;
 namespace RazorTest.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260305101154_insertfirstteacher")]
+    partial class insertfirstteacher
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.2");
@@ -107,43 +110,6 @@ namespace RazorTest.Migrations
                     b.HasBaseType("RazorTest.Models.User");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
-                            Email = "elev1@techcollege.dk",
-                            Name = "Elev 1",
-                            PasswordHash = "U3R1ZGVudDEyMzQ="
-                        },
-                        new
-                        {
-                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
-                            Email = "elev2@techcollege.dk",
-                            Name = "Elev 2",
-                            PasswordHash = "U3R1ZGVudDEyMzQ="
-                        },
-                        new
-                        {
-                            Id = new Guid("44444444-4444-4444-4444-444444444444"),
-                            Email = "elev3@techcollege.dk",
-                            Name = "Elev 3",
-                            PasswordHash = "U3R1ZGVudDEyMzQ="
-                        },
-                        new
-                        {
-                            Id = new Guid("55555555-5555-5555-5555-555555555555"),
-                            Email = "elev4@techcollege.dk",
-                            Name = "Elev 4",
-                            PasswordHash = "U3R1ZGVudDEyMzQ="
-                        },
-                        new
-                        {
-                            Id = new Guid("66666666-6666-6666-6666-666666666666"),
-                            Email = "elev5@techcollege.dk",
-                            Name = "Elev 5",
-                            PasswordHash = "U3R1ZGVudDEyMzQ="
-                        });
                 });
 
             modelBuilder.Entity("RazorTest.Models.Teacher", b =>
@@ -159,13 +125,6 @@ namespace RazorTest.Migrations
                             Email = "test@gmail.com",
                             Name = "Test",
                             PasswordHash = "VGVzdDEyMzQ="
-                        },
-                        new
-                        {
-                            Id = new Guid("11111111-1111-1111-1111-111111111111"),
-                            Email = "amalie@techcollege.dk",
-                            Name = "Amalie",
-                            PasswordHash = "VGVhY2hlcjEyMzQ="
                         });
                 });
 

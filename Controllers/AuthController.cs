@@ -26,7 +26,7 @@ public class AuthController : Controller
 	public async Task<IActionResult> Login(string email, string password)
 	{
 		// 🔐 hash the incoming password
-		var hashedPassword = HashPassword(password);
+		var hashedPassword = Auth.HashPassword(password);
 
 		// Check Student
 		var student = await _context.Students
@@ -79,12 +79,7 @@ public class AuthController : Controller
 	}
 
 	// ⚠️ Simple example only (NOT production secure)
-	private string HashPassword(string password)
-	{
-		return Convert.ToBase64String(
-			System.Text.Encoding.UTF8.GetBytes(password));
-	}
-
+	
 	public IActionResult AccessDenied()
 	{
 		return View();

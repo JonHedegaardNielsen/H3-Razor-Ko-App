@@ -3,7 +3,6 @@ namespace RazorTest.Models;
 
 public class Teacher : User
 {
-
 	// Mange-til-mange: lærer kan være i flere queues
 	public List<Queue> Queues { get; set; } = [];
 

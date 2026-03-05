@@ -3394,24 +3394,25 @@
     ]
   },
   "packageFolders": {
-    "/home/jon/.nuget/packages/": {}
+    "/home/jakob-hjort/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jon/Programming/C#/RazorTest/RazorTest.csproj",
+      "projectUniqueName": "/home/jakob-hjort/Documents/Skole/Razorpage-koapp/RazorTest.csproj",
       "projectName": "RazorTest",
-      "projectPath": "/home/jon/Programming/C#/RazorTest/RazorTest.csproj",
-      "packagesPath": "/home/jon/.nuget/packages/",
-      "outputPath": "/home/jon/Programming/C#/RazorTest/obj/",
+      "projectPath": "/home/jakob-hjort/Documents/Skole/Razorpage-koapp/RazorTest.csproj",
+      "packagesPath": "/home/jakob-hjort/.nuget/packages/",
+      "outputPath": "/home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/jon/.nuget/NuGet/NuGet.Config"
+        "/home/jakob-hjort/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3492,7 +3493,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/jon/.local/share/mise/installs/dotnet/10.0.102/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
