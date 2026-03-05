@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace RazorTest.Migrations
 {
     /// <inheritdoc />
-    public partial class inittial : Migration
+    public partial class _1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -110,24 +112,80 @@ namespace RazorTest.Migrations
                 name: "TeacherQueues",
                 columns: table => new
                 {
-                    QueuesId = table.Column<int>(type: "INTEGER", nullable: false),
-                    TeachersId = table.Column<Guid>(type: "TEXT", nullable: false)
+                    QueueId = table.Column<int>(type: "INTEGER", nullable: false),
+                    TeacherId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TeacherQueues", x => new { x.QueuesId, x.TeachersId });
+                    table.PrimaryKey("PK_TeacherQueues", x => new { x.QueueId, x.TeacherId });
                     table.ForeignKey(
-                        name: "FK_TeacherQueues_Queues_QueuesId",
-                        column: x => x.QueuesId,
+                        name: "FK_TeacherQueues_Queues_QueueId",
+                        column: x => x.QueueId,
                         principalTable: "Queues",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TeacherQueues_Teachers_TeachersId",
-                        column: x => x.TeachersId,
+                        name: "FK_TeacherQueues_Teachers_TeacherId",
+                        column: x => x.TeacherId,
                         principalTable: "Teachers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Queues",
+                columns: new[] { "Id", "QueueName" },
+                values: new object[,]
+                {
+                    { 1, "Serverside" },
+                    { 2, "Gui-programmering" },
+                    { 3, "Intro" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Email", "Name", "PasswordHash" },
+                values: new object[,]
+                {
+                    { new Guid("11111111-1111-1111-1111-111111111111"), "amalie@techcollege.dk", "Amalie", "VGVhY2hlcjEyMzQ=" },
+                    { new Guid("22222222-2222-2222-2222-222222222222"), "elev1@techcollege.dk", "Elev 1", "U3R1ZGVudDEyMzQ=" },
+                    { new Guid("33333333-3333-3333-3333-333333333333"), "elev2@techcollege.dk", "Elev 2", "U3R1ZGVudDEyMzQ=" },
+                    { new Guid("44444444-4444-4444-4444-444444444444"), "elev3@techcollege.dk", "Elev 3", "U3R1ZGVudDEyMzQ=" },
+                    { new Guid("55555555-5555-5555-5555-555555555555"), "elev4@techcollege.dk", "Elev 4", "U3R1ZGVudDEyMzQ=" },
+                    { new Guid("66666666-6666-6666-6666-666666666666"), "elev5@techcollege.dk", "Elev 5", "U3R1ZGVudDEyMzQ=" },
+                    { new Guid("81cce9d1-dd44-4754-b3b7-f150cdd4ff11"), "test@gmail.com", "Test", "VGVzdDEyMzQ=" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Students",
+                column: "Id",
+                values: new object[]
+                {
+                    new Guid("22222222-2222-2222-2222-222222222222"),
+                    new Guid("33333333-3333-3333-3333-333333333333"),
+                    new Guid("44444444-4444-4444-4444-444444444444"),
+                    new Guid("55555555-5555-5555-5555-555555555555"),
+                    new Guid("66666666-6666-6666-6666-666666666666")
+                });
+
+            migrationBuilder.InsertData(
+                table: "Teachers",
+                column: "Id",
+                values: new object[]
+                {
+                    new Guid("11111111-1111-1111-1111-111111111111"),
+                    new Guid("81cce9d1-dd44-4754-b3b7-f150cdd4ff11")
+                });
+
+            migrationBuilder.InsertData(
+                table: "TeacherQueues",
+                columns: new[] { "QueueId", "TeacherId" },
+                values: new object[,]
+                {
+                    { 1, new Guid("81cce9d1-dd44-4754-b3b7-f150cdd4ff11") },
+                    { 2, new Guid("11111111-1111-1111-1111-111111111111") },
+                    { 3, new Guid("11111111-1111-1111-1111-111111111111") },
+                    { 3, new Guid("81cce9d1-dd44-4754-b3b7-f150cdd4ff11") }
                 });
 
             migrationBuilder.CreateIndex(
@@ -147,9 +205,9 @@ namespace RazorTest.Migrations
                 column: "TeacherId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TeacherQueues_TeachersId",
+                name: "IX_TeacherQueues_TeacherId",
                 table: "TeacherQueues",
-                column: "TeachersId");
+                column: "TeacherId");
         }
 
         /// <inheritdoc />

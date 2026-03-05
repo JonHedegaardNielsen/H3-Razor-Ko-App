@@ -391,7 +391,6 @@
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json
-/home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/scopedcss/bundle/RazorTest.styles.css
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/scopedcss/projectbundle/RazorTest.bundle.scp.css
@@ -457,8 +456,6 @@
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/compressed/97rkibe2hc-{0}-muycvpuwrr-muycvpuwrr.gz
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/compressed/9au7uzdzir-{0}-87fc7y1x7t-87fc7y1x7t.gz
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/compressed/sz74izmhpj-{0}-jfsiqqwiad-jfsiqqwiad.gz
-/home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/compressed/10ydg1lujk-{0}-gz3vnego5u-gz3vnego5u.gz
-/home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/compressed/v1u8wlxq8i-{0}-gz3vnego5u-gz3vnego5u.gz
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/staticwebassets.build.json
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/staticwebassets.build.json.cache
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/staticwebassets.development.json
@@ -470,3 +467,5 @@
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/RazorTest.pdb
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/RazorTest.genruntimeconfig.cache
 /home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/ref/RazorTest.dll
+/home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/compressed/10ydg1lujk-{0}-ym4esybdrl-ym4esybdrl.gz
+/home/jakob-hjort/Documents/Skole/Razorpage-koapp/obj/Debug/net10.0/compressed/v1u8wlxq8i-{0}-ym4esybdrl-ym4esybdrl.gz

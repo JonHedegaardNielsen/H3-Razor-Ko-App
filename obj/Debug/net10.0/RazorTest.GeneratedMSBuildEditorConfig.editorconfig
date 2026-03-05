@@ -30,57 +30,45 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Auth/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXV0aC9Mb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS9JbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/QueueEntries/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVldWVFbnRyaWVzL0NyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Queues/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVldWVzL0RldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Queues/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUXVldWVzL0luZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/QueueEntries/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVldWVFbnRyaWVzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Queues/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVldWVzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Queues/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUXVldWVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Pages/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-p4gr0vuncu
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 
 [/home/jakob-hjort/Documents/Skole/Razorpage-koapp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s

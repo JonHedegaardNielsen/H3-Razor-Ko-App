@@ -17,21 +17,6 @@ namespace RazorTest.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.2");
 
-            modelBuilder.Entity("QueueTeacher", b =>
-                {
-                    b.Property<int>("QueuesId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<Guid>("TeachersId")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("QueuesId", "TeachersId");
-
-                    b.HasIndex("TeachersId");
-
-                    b.ToTable("TeacherQueues", (string)null);
-                });
-
             modelBuilder.Entity("RazorTest.Models.Queue", b =>
                 {
                     b.Property<int>("Id")
@@ -45,6 +30,23 @@ namespace RazorTest.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Queues");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            QueueName = "Serverside"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            QueueName = "Gui-programmering"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            QueueName = "Intro"
+                        });
                 });
 
             modelBuilder.Entity("RazorTest.Models.QueueEntry", b =>
@@ -100,6 +102,43 @@ namespace RazorTest.Migrations
                     b.ToTable("Users");
 
                     b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("TeacherQueues", b =>
+                {
+                    b.Property<int>("QueueId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("TeacherId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("QueueId", "TeacherId");
+
+                    b.HasIndex("TeacherId");
+
+                    b.ToTable("TeacherQueues", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            QueueId = 1,
+                            TeacherId = new Guid("81cce9d1-dd44-4754-b3b7-f150cdd4ff11")
+                        },
+                        new
+                        {
+                            QueueId = 2,
+                            TeacherId = new Guid("11111111-1111-1111-1111-111111111111")
+                        },
+                        new
+                        {
+                            QueueId = 3,
+                            TeacherId = new Guid("81cce9d1-dd44-4754-b3b7-f150cdd4ff11")
+                        },
+                        new
+                        {
+                            QueueId = 3,
+                            TeacherId = new Guid("11111111-1111-1111-1111-111111111111")
+                        });
                 });
 
             modelBuilder.Entity("RazorTest.Models.Student", b =>
@@ -169,21 +208,6 @@ namespace RazorTest.Migrations
                         });
                 });
 
-            modelBuilder.Entity("QueueTeacher", b =>
-                {
-                    b.HasOne("RazorTest.Models.Queue", null)
-                        .WithMany()
-                        .HasForeignKey("QueuesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("RazorTest.Models.Teacher", null)
-                        .WithMany()
-                        .HasForeignKey("TeachersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("RazorTest.Models.QueueEntry", b =>
                 {
                     b.HasOne("RazorTest.Models.Queue", "Queue")
@@ -208,6 +232,21 @@ namespace RazorTest.Migrations
                     b.Navigation("Student");
 
                     b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("TeacherQueues", b =>
+                {
+                    b.HasOne("RazorTest.Models.Queue", null)
+                        .WithMany()
+                        .HasForeignKey("QueueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("RazorTest.Models.Teacher", null)
+                        .WithMany()
+                        .HasForeignKey("TeacherId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("RazorTest.Models.Student", b =>
